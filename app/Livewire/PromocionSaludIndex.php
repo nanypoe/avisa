@@ -91,7 +91,7 @@ class PromocionSaludIndex extends Component
     public function render()
     {
         // Obtener promociones de salud paginadas (5 por página)
-        $promociones = PromocionSalud::lastest()->paginate(5);
+        $promociones = PromocionSalud::latest()->paginate(5);
         return view('livewire.promocion-salud-index', ['promociones' => $promociones]);
     }
 }
