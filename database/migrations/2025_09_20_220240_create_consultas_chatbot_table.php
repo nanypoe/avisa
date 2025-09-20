@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipo_unidad_salud', function (Blueprint $table) {
+        Schema::create('consultas_chatbot', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre'); // Centro de Salud, Hospital, Clínica, etc.
-            $table->string('icono')->nullable(); // para el mapa
-            $table->text('descripcion')->nullable();
+            $table->string('session_id'); // para tracking sin requerir login
+            $table->json('sintomas_seleccionados');
+            $table->json('enfermedades_sugeridas');
+            $table->string('ip_address')->nullable();
+            $table->string('user_agent')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipo_unidad_salud');
+        Schema::dropIfExists('consultas_chatbot');
     }
 };

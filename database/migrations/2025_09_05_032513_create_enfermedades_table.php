@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('enfermedades', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->text('descripcion')->nullable();
+            $table->text('recomendaciones_generales')->nullable();
+            $table->text('signos_alarma')->nullable();
+            $table->boolean('es_prioritaria')->default(false);
+            $table->string('categoria')->nullable();
             $table->timestamps();
         });
     }

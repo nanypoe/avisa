@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('sintomas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->text('pregunta'); // cómo se le preguntará al usuario
+            $table->string('tipo')->default('boolean'); // booleano, opción múltiple, texto, etc.
+            $table->integer('prioridad')->default('1'); // de 1 a 10, siendo 10 la más alta
+            $table->boolean('es_signo_alarma')->default(false); // si el síntoma está activo o no
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('enfermedad_id')->constrained('enfermedades')->onDelete('cascade');
             $table->foreignId('sintoma_id')->constrained('sintomas')->onDelete('cascade');
+            $table->integer('relevancia')->default(1); // qué tan relevante es este síntoma para la enfermedad, de 1 a 10
             $table->timestamps();
             $table->unique(['enfermedad_id', 'sintoma_id']);
         });
