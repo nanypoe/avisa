@@ -28,23 +28,27 @@ AVISA: Asistente Virtual de Salud que brinda información confiable y contextual
 ## Instalación Local
 
 1. **Clonar el repositorio**
-   ```bash
+   ```
    git clone https://github.com/tu-usuario/avisa.git
    cd avisa
 
 2. **Instalar dependencias PHP**
-    ```composer install
+   ```
+   composer install
 
 3. **Instalar dependencias JavaScript**
-    ```npm install
+   ```
+    npm install
     npm run build
 
 4. **Configurar el entorno**
-    ```cp .env.example .env
+   ```
+    cp .env.example .env
     php artisan key:generate
 
 5. **Configurar la base de datos en .env**
-    ```DB_CONNECTION=mysql
+   ```
+    DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=avisa_db
@@ -52,16 +56,20 @@ AVISA: Asistente Virtual de Salud que brinda información confiable y contextual
     DB_PASSWORD=
 
 6. **Ejecutar las migraciones**
-    ```php artisan migrate
+   ```
+    php artisan migrate
 
 7. **Ejecutar seeders (datos iniciales)**
-    ```php artisan db:seed
+   ```
+    php artisan db:seed
 
 8. **Iniciar el servidor local**
-    ```php artisan serve
+   ```
+    php artisan serve
 
 9. **Acceder a la app**
-    ```https//192.0.0.7:3306/
+   ```
+    https//192.0.0.7:3306/
 
 ## Estructura de la Base de Datos
 
