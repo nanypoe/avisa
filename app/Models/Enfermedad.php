@@ -10,6 +10,7 @@ class Enfermedad extends Model
 {
     use HasFactory;
 
+    protected $table = "enfermedades";
     protected $fillable = ['nombre', 'descripcion', 'signos_alarma', 'es_prioritaria'];
 
     //Una enfermedad pertenece a muchos sintomas

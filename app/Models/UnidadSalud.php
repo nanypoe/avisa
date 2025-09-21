@@ -10,6 +10,7 @@ class UnidadSalud extends Model
 {
     use HasFactory;
 
+    protected $table = "unidades_salud";
     protected $fillable = [
         'nombre', 'direccion', 'telefono', 'horario_atencion',
         'latitud', 'longitud', 'tipo_unidad_salud_id', 'municipio_id', 'servicios'
