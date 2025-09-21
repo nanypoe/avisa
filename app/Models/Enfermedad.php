@@ -10,9 +10,11 @@ class Enfermedad extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nombre', 'descripcion', 'signos_alarma', 'es_prioritaria'];
+
     //Una enfermedad pertenece a muchos sintomas
     public function sintomas(): BelongsToMany
     {
-        return $this->belongsToMany(Sintoma::class);
+        return $this->belongsToMany(Sintoma::class, 'enfermedad_sintoma')->withPivot('relevancia'); // Tabla pivote con campo adicional 'relevancia'
 }
 }
