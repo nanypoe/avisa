@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\EventoSalud;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -18,6 +19,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SintomaSeeder::class);
         $this->call(EnfermedadSintomaSeeder::class);
         $this->call(UnidadSaludSeeder::class);
+        $this->call(PromocionSaludSeeder::class);
+        $this->call(EventoSaludSeeder::class);
+        $this->call(ConsultaChatbotSeeder::class);
         //Aquí los demás seeders
 
         User::updateOrCreate(

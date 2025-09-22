@@ -10,10 +10,11 @@ class EventoSalud extends Model
 {
     use HasFactory;
 
+    protected $table = "eventos_salud";
     protected $fillable = [
         'titulo',
         'descripcion',
-        'tipo_evento',
+        'tipo',
         'fecha_inicio',
         'fecha_fin',
         'latitud',

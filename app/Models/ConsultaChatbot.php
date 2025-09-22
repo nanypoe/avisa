@@ -9,6 +9,7 @@ class ConsultaChatbot extends Model
 {
     use HasFactory;
 
+    protected $table = "consultas_chatbot";
     protected $fillable = [
         'session_id',
         'sintomas_seleccionados',

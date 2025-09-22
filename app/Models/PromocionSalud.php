@@ -9,6 +9,7 @@ class PromocionSalud extends Model
 {
     use HasFactory;
 
+    protected $table = "promociones_salud";
     protected $fillable = [
         'titulo',
         'contenido',

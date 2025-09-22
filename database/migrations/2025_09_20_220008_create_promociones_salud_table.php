@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('imagen')->nullable(); // URL o path de la imagen asociada
             $table->boolean('es_publicado')->default(false); // Indica si la promoción está publicada
             $table->dateTime('fecha_publicacion')->nullable(); // Fecha de publicación
+            $table->string('autor')->nullable(); // Autor o fuente de la promoción
             $table->timestamps();
         });
     }
