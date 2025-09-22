@@ -5,6 +5,46 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/spec/v2.0.0.html).
 
+## [v0.4.0] - 2025-09-21
+
+### Added
+- **Sistema completo de Seeders**
+  - `PromocionSaludSeeder`: Contenido de blog/promociones de salud con información real de prevención
+  - `EventoSaludSeeder`: Ferias y eventos de salud en diferentes municipios de Nicaragua
+  - `ConsultaChatbotSeeder`: Datos de prueba para historial de consultas del chatbot
+
+- **Manual de Identidad Corporativa AVISA**
+  - Paleta de colores oficial (#2563EB azul médico, #10B981 verde salud, #F59E0B naranja alerta)
+  - Tipografía Inter implementada
+  - Sistema de diseño con variables CSS personalizadas
+  - Guía de estilos completa en `resources/css/avisa.css`
+
+- **Homepage completamente funcional**
+  - Layout principal con navegación responsive
+  - Hero section con call-to-action al chatbot
+  - Tarjetas de acceso rápido a las 3 funcionalidades principales
+  - Sección de promociones destacadas (con datos reales de BD)
+  - Diseño responsive y accesible
+  - Integración con Bootstrap 5 y estilos personalizados
+
+- **Sistema de rutas y controladores**
+  - `PaginaController` para manejar las vistas principales
+  - Rutas definidas para homepage, mapa y promociones
+  - Passing de datos desde controladores a vistas
+
+### Changed
+- **Mejora en modelos Eloquent**
+  - Relaciones mejoradas con `belongsTo`, `hasMany`, `belongsToMany`
+  - Castings de datos JSON en `ConsultaChatbot`
+  - Scopes para filtros comunes
+  - Propiedades `$fillable` completas
+
+### Technical
+- Configuración completa de assets con Vite
+- Integración de fuente Inter de Google Fonts
+- Variables CSS personalizadas para consistencia de diseño
+- Sistema de componentes reutilizables con clases CSS personalizadas
+
 ## [v0.3.0] - 2025-09-21
 
 ### Added
@@ -60,12 +100,7 @@ y este proyecto adhiere a [Versionado Semántico](https://semver.org/spec/v2.0.0
 
 ## [Próximas Versiones]
 
-### [v0.4.0] - Planeado
-- **Seeders restantes**
-  - `PromocionSaludSeeder`: Contenido de blog/promociones de salud
-  - `EventoSaludSeeder`: Ferias y eventos de salud
-  - `ConsultaChatbotSeeder`: Datos de prueba para historial de consultas
-
+### [v0.4.3] - Planeado
 - **Vistas básicas**
   - Página de mapa de unidades de salud
   - Página de promociones/blog de salud
