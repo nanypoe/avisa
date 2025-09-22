@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVISA - Asistente Virtual de Salud</title>
+    <title>AVISA - Asistente Virtual de Salud para Nicaragua</title>
+    
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Estilos AVISA -->
+    <link href="{{ asset('css/avisa.css') }}" rel="stylesheet">
+    
     @livewireStyles
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="#" alt="AVISA Logo" width="30" height="30" class="d-inline-block align-text-top">
-                AVISA
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/mapa">Mapa de Salud</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/promociones">Promociones de Salud</a>
-                    </li>
+<body class="avisa-body">
+    <!-- Navbar -->
+    <nav class="avisa-navbar">
+        <div class="avisa-container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="/" class="avisa-nav-brand">
+                    <strong>AVISA</strong>
+                    <small class="text-muted">Asistente Virtual de Salud</small>
+                </a>
+                
+                <ul class="avisa-nav-menu">
+                    <li><a href="/" class="avisa-nav-link active">Inicio</a></li>
+                    <li><a href="/mapa" class="avisa-nav-link">Mapa</a></li>
+                    <li><a href="/promociones" class="avisa-nav-link">Promociones</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main>
-        
+     <main>
+        @yield('content')
     </main>
 
+    <!-- Footer -->
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h5>AVISA</h5>
                     <p>Asistente Virtual de Salud para Nicaragua</p>
+                    <p class="text-muted">"Tu salud, nuestra prioridad"</p>
                 </div>
-                <div class="col-md-6 text-end">
+                <div class="col-md-6 text-md-end">
                     <p>Con el apoyo del MINSA</p>
+                    <p class="text-muted">© 2024 AVISA - Todos los derechos reservados</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,298 @@
+/* ===== VARIABLES Y CONFIGURACIÓN AVISA ===== */
+:root {
+    /* Colores de marca */
+    --avisa-primary: #2563EB;
+    --avisa-primary-hover: #3B77F2;
+    --avisa-primary-active: #1D4FD9;
+    
+    --avisa-secondary: #10B981;
+    --avisa-secondary-hover: #12CC8E;
+    --avisa-secondary-active: #0DA271;
+    
+    --avisa-accent: #F59E0B;
+    --avisa-accent-hover: #FBB324;
+    --avisa-accent-active: #E58C00;
+    
+    /* Escala de grises */
+    --avisa-dark: #374151;
+    --avisa-gray: #6B7280;
+    --avisa-light: #F3F4F6;
+    --avisa-white: #FFFFFF;
+    
+    /* Estados */
+    --avisa-disabled: #9CA3AF;
+    
+    /* Tipografía */
+    --avisa-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --avisa-font-weight-normal: 400;
+    --avisa-font-weight-medium: 500;
+    --avisa-font-weight-semibold: 600;
+    --avisa-font-weight-bold: 700;
+    
+    /* Espaciado */
+    --avisa-spacing-1: 0.25rem;  /* 4px */
+    --avisa-spacing-2: 0.5rem;   /* 8px */
+    --avisa-spacing-3: 0.75rem;  /* 12px */
+    --avisa-spacing-4: 1rem;     /* 16px */
+    --avisa-spacing-5: 1.25rem;  /* 20px */
+    --avisa-spacing-6: 1.5rem;   /* 24px */
+    --avisa-spacing-8: 2rem;     /* 32px */
+    --avisa-spacing-12: 3rem;    /* 48px */
+    --avisa-spacing-16: 4rem;    /* 64px */
+    
+    /* Border radius */
+    --avisa-radius-sm: 0.375rem;  /* 6px */
+    --avisa-radius: 0.5rem;       /* 8px */
+    --avisa-radius-lg: 0.75rem;   /* 12px */
+    
+    /* Sombras */
+    --avisa-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --avisa-shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== ESTILOS BASE ===== */
+.avisa-body {
+    font-family: var(--avisa-font-family);
+    font-weight: var(--avisa-font-weight-normal);
+    color: var(--avisa-dark);
+    line-height: 1.6;
+    background-color: var(--avisa-light);
+}
+
+.avisa-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--avisa-spacing-4);
+}
+
+/* ===== TIPOGRAFÍA ===== */
+.avisa-heading-1 {
+    font-size: 2.5rem;
+    font-weight: var(--avisa-font-weight-bold);
+    color: var(--avisa-primary);
+    margin-bottom: var(--avisa-spacing-4);
+}
+
+.avisa-heading-2 {
+    font-size: 2rem;
+    font-weight: var(--avisa-font-weight-semibold);
+    color: var(--avisa-dark);
+    margin-bottom: var(--avisa-spacing-4);
+}
+
+.avisa-heading-3 {
+    font-size: 1.5rem;
+    font-weight: var(--avisa-font-weight-semibold);
+    color: var(--avisa-dark);
+    margin-bottom: var(--avisa-spacing-3);
+}
+
+.avisa-text-lead {
+    font-size: 1.25rem;
+    font-weight: var(--avisa-font-weight-medium);
+    color: var(--avisa-gray);
+}
+
+.avisa-text {
+    font-size: 1rem;
+    color: var(--avisa-dark);
+}
+
+/* ===== BOTONES ===== */
+.avisa-btn {
+    display: inline-block;
+    padding: var(--avisa-spacing-3) var(--avisa-spacing-6);
+    border-radius: var(--avisa-radius);
+    font-weight: var(--avisa-font-weight-medium);
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--avisa-font-family);
+}
+
+.avisa-btn-primary {
+    background-color: var(--avisa-primary);
+    color: var(--avisa-white);
+}
+
+.avisa-btn-primary:hover {
+    background-color: var(--avisa-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--avisa-shadow);
+}
+
+.avisa-btn-primary:active {
+    background-color: var(--avisa-primary-active);
+    transform: translateY(0);
+}
+
+.avisa-btn-secondary {
+    background-color: var(--avisa-secondary);
+    color: var(--avisa-white);
+}
+
+.avisa-btn-secondary:hover {
+    background-color: var(--avisa-secondary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--avisa-shadow);
+}
+
+.avisa-btn-accent {
+    background-color: var(--avisa-accent);
+    color: var(--avisa-white);
+}
+
+.avisa-btn-accent:hover {
+    background-color: var(--avisa-accent-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--avisa-shadow);
+}
+
+.avisa-btn:disabled {
+    background-color: var(--avisa-disabled);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ===== TARJETAS ===== */
+.avisa-card {
+    background: var(--avisa-white);
+    border-radius: var(--avisa-radius-lg);
+    padding: var(--avisa-spacing-6);
+    box-shadow: var(--avisa-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avisa-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--avisa-shadow-md);
+}
+
+.avisa-card-header {
+    margin-bottom: var(--avisa-spacing-4);
+}
+
+.avisa-card-body {
+    margin-bottom: var(--avisa-spacing-4);
+}
+
+.avisa-card-footer {
+    border-top: 1px solid var(--avisa-light);
+    padding-top: var(--avisa-spacing-4);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.avisa-navbar {
+    background: var(--avisa-white);
+    box-shadow: var(--avisa-shadow);
+    padding: var(--avisa-spacing-4) 0;
+}
+
+.avisa-nav-brand {
+    font-size: 1.5rem;
+    font-weight: var(--avisa-font-weight-bold);
+    color: var(--avisa-primary);
+    text-decoration: none;
+}
+
+.avisa-nav-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--avisa-spacing-6);
+    margin: 0;
+    padding: 0;
+}
+
+.avisa-nav-link {
+    color: var(--avisa-dark);
+    text-decoration: none;
+    font-weight: var(--avisa-font-weight-medium);
+    transition: color 0.2s ease;
+}
+
+.avisa-nav-link:hover {
+    color: var(--avisa-primary);
+}
+
+.avisa-nav-link.active {
+    color: var(--avisa-primary);
+    border-bottom: 2px solid var(--avisa-primary);
+}
+
+/* ===== HERO SECTION ===== */
+.avisa-hero {
+    background: linear-gradient(135deg, var(--avisa-primary) 0%, var(--avisa-secondary) 100%);
+    color: var(--avisa-white);
+    padding: var(--avisa-spacing-16) 0;
+    text-align: center;
+}
+
+.avisa-hero-title {
+    font-size: 3rem;
+    font-weight: var(--avisa-font-weight-bold);
+    margin-bottom: var(--avisa-spacing-4);
+}
+
+.avisa-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: var(--avisa-font-weight-medium);
+    margin-bottom: var(--avisa-spacing-8);
+    opacity: 0.9;
+}
+
+/* ===== GRID SYSTEM ===== */
+.avisa-grid {
+    display: grid;
+    gap: var(--avisa-spacing-6);
+}
+
+.avisa-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.avisa-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ===== UTILITIES ===== */
+.avisa-text-center { text-align: center; }
+.avisa-text-left { text-align: left; }
+.avisa-text-right { text-align: right; }
+
+.avisa-mt-1 { margin-top: var(--avisa-spacing-1); }
+.avisa-mt-2 { margin-top: var(--avisa-spacing-2); }
+.avisa-mt-4 { margin-top: var(--avisa-spacing-4); }
+.avisa-mt-8 { margin-top: var(--avisa-spacing-8); }
+
+.avisa-mb-1 { margin-bottom: var(--avisa-spacing-1); }
+.avisa-mb-2 { margin-bottom: var(--avisa-spacing-2); }
+.avisa-mb-4 { margin-bottom: var(--avisa-spacing-4); }
+.avisa-mb-8 { margin-bottom: var(--avisa-spacing-8); }
+
+.avisa-p-4 { padding: var(--avisa-spacing-4); }
+.avisa-p-6 { padding: var(--avisa-spacing-6); }
+.avisa-p-8 { padding: var(--avisa-spacing-8); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    :root {
+        --avisa-spacing-4: 0.75rem;
+        --avisa-spacing-6: 1rem;
+        --avisa-spacing-8: 1.5rem;
+    }
+    
+    .avisa-hero-title {
+        font-size: 2rem;
+    }
+    
+    .avisa-hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .avisa-nav-menu {
+        flex-direction: column;
+        gap: var(--avisa-spacing-2);
+    }
+}
