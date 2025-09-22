@@ -67,9 +67,9 @@ AVISA: Asistente Virtual de Salud que brinda información confiable y contextual
    ```
     php artisan serve
 
-9. **Acceder a la app**
-   ```
-    https//192.0.0.7:3306/
+9. **Acceder a la app con Ctrl + Click Izquierdo en la dirección que aparece, por ejemplo:
+    ```
+    [https://192.0.0.10](http://127.0.0.1:8000/)
 
 ## Estructura de la Base de Datos
 
